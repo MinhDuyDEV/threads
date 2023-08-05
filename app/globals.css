@@ -5,7 +5,7 @@
 @layer components {
   /* main */
   .main-container {
-    @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
+    @apply flex flex-col items-center flex-1 min-h-screen px-6 pb-10 bg-dark-1 pt-28 max-md:pb-32 sm:px-10;
   }
 
   /* Head Text */
@@ -15,7 +15,7 @@
 
   /* Activity */
   .activity-card {
-    @apply flex items-center gap-2 rounded-md bg-dark-2 px-7 py-4;
+    @apply flex items-center gap-2 py-4 rounded-md bg-dark-2 px-7;
   }
 
   /* No Result */
@@ -25,7 +25,7 @@
 
   /* Community Card */
   .community-card {
-    @apply w-full rounded-lg bg-dark-3 px-4 py-5 sm:w-96;
+    @apply w-full px-4 py-5 rounded-lg bg-dark-3 sm:w-96;
   }
 
   .community-card_btn {
@@ -43,51 +43,51 @@
   }
 
   .user-card_avatar {
-    @apply flex flex-1 items-start justify-start gap-3 xs:items-center;
+    @apply flex items-start justify-start flex-1 gap-3 xs:items-center;
   }
 
   .user-card_btn {
     @apply h-auto min-w-[74px] rounded-lg bg-primary-500 text-[12px] text-light-1 !important;
   }
 
-  .searchbar {
-    @apply flex gap-1 rounded-lg bg-dark-3 px-4 py-2;
+  .searchBar {
+    @apply flex gap-1 px-4 py-2 rounded-lg bg-dark-3;
   }
 
-  .searchbar_input {
+  .searchBar_input {
     @apply border-none bg-dark-3 text-base-regular text-light-4 outline-none !important;
   }
 
-  .topbar {
-    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3;
+  .topBar {
+    @apply fixed top-0 z-30 flex items-center justify-between w-full px-6 py-3 bg-dark-2;
   }
 
-  .bottombar {
-    @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 md:hidden;
+  .bottomBar {
+    @apply fixed bottom-0 z-10 w-full p-4 rounded-t-3xl bg-glassmorphism backdrop-blur-lg xs:px-7 md:hidden;
   }
 
-  .bottombar_container {
+  .bottomBar_container {
     @apply flex items-center justify-between gap-3 xs:gap-5;
   }
 
-  .bottombar_link {
+  .bottomBar_link {
     @apply relative flex flex-col items-center gap-2 rounded-lg p-2 sm:flex-1 sm:px-2 sm:py-2.5;
   }
 
-  .leftsidebar {
-    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-md:hidden;
+  .leftSidebar {
+    @apply sticky top-0 left-0 z-20 flex flex-col justify-between h-screen pb-5 overflow-auto border-r w-fit border-r-dark-4 bg-dark-2 pt-28 max-md:hidden;
   }
 
-  .leftsidebar_link {
-    @apply relative flex justify-start gap-4 rounded-lg p-4;
+  .leftSidebar_link {
+    @apply relative flex justify-start gap-4 p-4 rounded-lg;
   }
 
   .pagination {
-    @apply mt-10 flex w-full items-center justify-center gap-5;
+    @apply flex items-center justify-center w-full gap-5 mt-10;
   }
 
-  .rightsidebar {
-    @apply sticky right-0 top-0 z-20 flex h-screen w-fit flex-col justify-between gap-12 overflow-auto border-l border-l-dark-4 bg-dark-2 px-10 pb-6 pt-28 max-xl:hidden;
+  .rightSidebar {
+    @apply sticky top-0 right-0 z-20 flex flex-col justify-between h-screen gap-12 px-10 pb-6 overflow-auto border-l w-fit border-l-dark-4 bg-dark-2 pt-28 max-xl:hidden;
   }
 }
 
