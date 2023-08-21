@@ -32,10 +32,9 @@ interface Props {
     bio: string;
     image: string;
   };
-  btnTitle: string;
 }
 
-const AccountProfile = ({ user, btnTitle }: Props) => {
+const AccountProfile = ({ user }: Props) => {
   const [files, setFiles] = useState<File[]>([]);
   const { startUpload } = useUploadThing("media");
   const router = useRouter();
@@ -101,7 +100,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
           name="profile_photo"
           render={({ field }) => (
             <FormItem className="flex items-center gap-4">
-              <FormLabel className="cursor-pointer account-form_image-label">
+              <FormLabel className="relative cursor-pointer account-form_image-label">
                 {field.value ? (
                   <Image
                     src={field.value}
@@ -109,7 +108,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     width={96}
                     height={96}
                     priority
-                    className="object-contain rounded-full"
+                    className="object-cover rounded-full"
                   />
                 ) : (
                   <Image

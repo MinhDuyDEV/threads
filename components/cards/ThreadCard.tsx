@@ -37,7 +37,11 @@ const ThreadCard = ({
   isComment,
 }: Props) => {
   return (
-    <article className="flex flex-col w-full rounded-xl bg-dark-2 p-7">
+    <article
+      className={`flex flex-col w-full rounded-xl ${
+        isComment ? "px-0 xs:px-7" : "bg-dark-2 p-7"
+      }`}
+    >
       <div className="flex items-start justify-between">
         <div className="flex flex-row flex-1 w-full gap-4">
           <div className="flex flex-col items-center">
@@ -58,7 +62,7 @@ const ThreadCard = ({
               </h4>
             </Link>
             <p className="mt-2 text-small-regular text-light-2">{content}</p>
-            <div className="flex flex-col gap-3 mt-5">
+            <div className="flex flex-col gap-3 mt-5 mb-8">
               <div className="flex gap-3.5">
                 <Image
                   src="/assets/heart-gray.svg"
