@@ -100,7 +100,7 @@ const AccountProfile = ({ user }: Props) => {
           name="profile_photo"
           render={({ field }) => (
             <FormItem className="flex items-center gap-4">
-              <FormLabel className="relative cursor-pointer account-form_image-label">
+              <FormLabel className="relative overflow-hidden cursor-pointer account-form_image-label">
                 {field.value ? (
                   <Image
                     src={field.value}
@@ -108,14 +108,14 @@ const AccountProfile = ({ user }: Props) => {
                     width={96}
                     height={96}
                     priority
-                    className="object-cover rounded-full"
+                    className="object-contain"
                   />
                 ) : (
                   <Image
                     src="/assets/profile.svg"
                     alt="profile photo"
-                    width={24}
-                    height={24}
+                    width={96}
+                    height={96}
                     className="object-contain"
                   />
                 )}
